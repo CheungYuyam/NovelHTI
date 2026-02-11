@@ -1,0 +1,26 @@
+{
+    "model": {
+        "feature_dim1": 16,
+        "feature_dim2": 8,
+        "num_inner_layer": 3,
+        "num_outer_layer": 4,
+        "kg_path": "../preprocessed_data/kg_v3.csv",
+        "herb_feature_path": "../preprocessed_data/Matrix_Herb_TCM.npz",
+        "mapping_paths": {
+            "tcm_mm": "../preprocessed_data/Matrix_TCM_MM.npz",
+            "mm_disease": "../preprocessed_data/Matrix_MM_Disease.npz",
+            "disease_target": "../preprocessed_data/Matrix_Disease_Target.npz"
+        }
+    },
+    "train": {
+        "random_seed": 42,
+        "batch_size": 64,
+        "patience": 3,
+        "epochs": 250,
+        "device": "cuda:0",
+        "log_folder": "../ablation_p_trained_logs_and_results",
+        "model_name": "NovelHTI_ablation_without_pathways",
+        "mode": "by_fold",
+        "data_folder": "../basic_dataset_0.500_0.180_min_20_select_20"
+    }
+}
